@@ -122,7 +122,7 @@ const MainAppContent = () => {
         const { cartItems } = useContext(CartContext);
 
         return (
-            <header className="bg-green-700 text-white p-4 shadow-md">
+            <header className="bg-amber-900 text-white p-4 shadow-md">
                 <div className="container mx-auto flex justify-between items-center flex-wrap">
                     <h1 className="text-3xl font-bold">AgriHub</h1>
                     <nav className="mt-4 md:mt-0">
@@ -130,7 +130,7 @@ const MainAppContent = () => {
                             <li>
                                 <button
                                     onClick={() => navigate('home')}
-                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'home' ? 'bg-green-800' : 'hover:bg-green-600'}`}
+                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'home' ? 'bg-amber-800' : 'hover:bg-amber-700'}`}
                                 >
                                     <Home size={20} className="mr-2" /> Home
                                 </button>
@@ -138,7 +138,7 @@ const MainAppContent = () => {
                             <li>
                                 <button
                                     onClick={() => navigate('products')}
-                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'products' ? 'bg-green-800' : 'hover:bg-green-600'}`}
+                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'products' ? 'bg-amber-800' : 'hover:bg-amber-700'}`}
                                 >
                                     <ShoppingBag size={20} className="mr-2" /> Products
                                 </button>
@@ -146,7 +146,7 @@ const MainAppContent = () => {
                             <li>
                                 <button
                                     onClick={() => navigate('services')}
-                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'services' ? 'bg-green-800' : 'hover:bg-green-600'}`}
+                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'services' ? 'bg-amber-800' : 'hover:bg-amber-700'}`}
                                 >
                                     <Tractor size={20} className="mr-2" /> Services
                                 </button>
@@ -154,7 +154,7 @@ const MainAppContent = () => {
                             <li>
                                 <button
                                     onClick={() => navigate('events')}
-                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'events' ? 'bg-green-800' : 'hover:bg-green-600'}`}
+                                    className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'events' ? 'bg-amber-800' : 'hover:bg-amber-700'}`}
                                 >
                                     <CalendarDays size={20} className="mr-2" /> Events
                                 </button>
@@ -163,8 +163,8 @@ const MainAppContent = () => {
                                 <li>
                                     <button
                                         onClick={() => navigate('dashboard')}
-                                        className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'dashboard' ? 'bg-green-800' : 'hover:bg-green-600'}`}
-                                    >
+                                        className={`flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'dashboard' ? 'bg-amber-800' : 'hover:bg-amber-700'}`}
+                                >
                                         <BarChart size={20} className="mr-2" /> Dashboard
                                     </button>
                                 </li>
@@ -172,7 +172,7 @@ const MainAppContent = () => {
                             <li>
                                 <button
                                     onClick={() => navigate('cart')}
-                                    className={`relative flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'cart' ? 'bg-green-800' : 'hover:bg-green-600'}`}
+                                    className={`relative flex items-center px-3 py-2 rounded-md transition-colors duration-200 ${currentPage === 'cart' ? 'bg-amber-800' : 'hover:bg-amber-700'}`}
                                 >
                                     <ShoppingCart size={20} className="mr-2" /> Cart
                                     {cartItems.length > 0 && (
@@ -195,7 +195,7 @@ const MainAppContent = () => {
                                 <li>
                                     <button
                                         onClick={() => navigate('auth')}
-                                        className="flex items-center px-3 py-2 rounded-md transition-colors duration-200 hover:bg-green-600"
+                                        className="flex items-center px-3 py-2 rounded-md transition-colors duration-200 hover:bg-amber-700"
                                     >
                                         <LogIn size={20} className="mr-2" /> Login
                                     </button>
@@ -268,9 +268,10 @@ const MainAppContent = () => {
         };
 
         return (
-            <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-                <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
-                    <h2 className="text-3xl font-bold text-green-800 mb-6 text-center">
+            <div className="flex items-center justify-center min-h-screen p-4 bg-cover bg-center"
+                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1542841961-d64e9a3b839b?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')` }}>
+                <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-xl w-full max-w-md">
+                    <h2 className="text-3xl font-bold text-amber-900 mb-6 text-center">
                         {isSigningUp ? 'Sign Up for AgriHub' : 'Log In to AgriHub'}
                     </h2>
                     {authError && (
@@ -285,7 +286,7 @@ const MainAppContent = () => {
                                 <input
                                     type="text"
                                     id="username"
-                                    className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                    className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
                                     placeholder="your_username"
@@ -299,7 +300,7 @@ const MainAppContent = () => {
                             <input
                                 type="email"
                                 id="email"
-                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="your@email.com"
@@ -312,7 +313,7 @@ const MainAppContent = () => {
                             <input
                                 type="password"
                                 id="password"
-                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="********"
@@ -326,7 +327,7 @@ const MainAppContent = () => {
                                 <input
                                     type="password"
                                     id="confirmPassword"
-                                    className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                    className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     placeholder="********"
@@ -337,7 +338,7 @@ const MainAppContent = () => {
                         )}
                         <button
                             type="submit"
-                            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                             disabled={isLoading}
                         >
                             {isLoading ? (
@@ -360,7 +361,7 @@ const MainAppContent = () => {
                                 setPassword('');
                                 setConfirmPassword('');
                             }}
-                            className="text-green-600 hover:text-green-800 font-semibold transition-colors duration-200"
+                            className="text-amber-700 hover:text-amber-900 font-semibold transition-colors duration-200"
                             disabled={isLoading}
                         >
                             {isSigningUp ? 'Already have an account? Log In' : 'Need an account? Sign Up'}
@@ -375,13 +376,13 @@ const MainAppContent = () => {
     const HomePage = () => {
         return (
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Welcome to AgriHub!</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Welcome to AgriHub!</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                     AgriHub is a next-generation e-commerce platform designed exclusively for the farming community. Our mission is to empower farmers by providing a digital marketplace where they can easily list, promote, and sell their products directly to consumers, retailers, and businesses—eliminating intermediaries and maximizing profits.
                 </p>
 
                 {/* What Makes Agrihub Unique Section */}
-                <h3 className="text-2xl font-bold text-green-700 mb-6">What Makes AgriHub Unique?</h3>
+                <h3 className="text-2xl font-bold text-amber-800 mb-6">What Makes AgriHub Unique?</h3>
                 <div className="grid md:grid-cols-2 gap-8 mt-6">
                     {/* Direct-to-Market Sales */}
                     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -392,7 +393,7 @@ const MainAppContent = () => {
                             onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/400x250/d4edda/2a5c3a?text=Direct-to-Market`; }}
                         />
                         <div className="p-4">
-                            <h4 className="text-xl font-semibold text-green-800 mb-2 flex items-center"><ShoppingBag className="mr-2" /> Direct-to-Market Sales</h4>
+                            <h4 className="text-xl font-semibold text-amber-900 mb-2 flex items-center"><ShoppingBag className="mr-2" /> Direct-to-Market Sales</h4>
                             <p className="text-gray-600 text-sm">Sell produce, dairy, grains, meat, and value-added goods directly.</p>
                         </div>
                     </div>
@@ -405,7 +406,7 @@ const MainAppContent = () => {
                             onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/400x250/d4edda/2a5c3a?text=Farm+Services`; }}
                         />
                         <div className="p-4">
-                            <h4 className="text-xl font-semibold text-green-800 mb-2 flex items-center"><Tractor className="mr-2" /> Integrated Farm Services</h4>
+                            <h4 className="text-xl font-semibold text-amber-900 mb-2 flex items-center"><Tractor className="mr-2" /> Integrated Farm Services</h4>
                             <p className="text-gray-600 text-sm">Offer rentals, soil testing, crop spraying, and on-farm experiences.</p>
                         </div>
                     </div>
@@ -418,7 +419,7 @@ const MainAppContent = () => {
                             onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/400x250/d4edda/2a5c3a?text=Smart+Tools`; }}
                         />
                         <div className="p-4">
-                            <h4 className="text-xl font-semibold text-green-800 mb-2 flex items-center"><BarChart className="mr-2" /> Smart Tools for Farmers</h4>
+                            <h4 className="text-xl font-semibold text-amber-900 mb-2 flex items-center"><BarChart className="mr-2" /> Smart Tools for Farmers</h4>
                             <p className="text-gray-600 text-sm">Inventory, analytics, and compliance support for optimized operations.</p>
                         </div>
                     </div>
@@ -431,14 +432,14 @@ const MainAppContent = () => {
                             onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/400x250/d4edda/2a5c3a?text=Community+%26+Learning`; }}
                         />
                         <div className="p-4">
-                            <h4 className="text-xl font-semibold text-green-800 mb-2 flex items-center"><Users className="mr-2" /> Community and Learning</h4>
+                            <h4 className="text-xl font-semibold text-amber-900 mb-2 flex items-center"><Users className="mr-2" /> Community and Learning</h4>
                             <p className="text-gray-600 text-sm">Host/join events, access knowledge hub, and farmer-to-farmer exchange.</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Customer-Centric Experience Section */}
-                <h3 className="text-2xl font-bold text-green-700 mt-10 mb-6">Customer-Centric Experience</h3>
+                <h3 className="text-2xl font-bold text-amber-800 mt-10 mb-6">Customer-Centric Experience</h3>
                 <div className="grid md:grid-cols-3 gap-8 mt-6">
                     {/* Personalized Shopping */}
                     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -448,8 +449,8 @@ const MainAppContent = () => {
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-4 text-center">
-                            <CheckCircle2 size={32} className="text-green-500 mx-auto mb-2" />
-                            <h4 className="text-xl font-semibold text-green-800 mb-1">Personalized Shopping</h4>
+                            <CheckCircle2 size={32} className="text-lime-600 mx-auto mb-2" />
+                            <h4 className="text-xl font-semibold text-amber-900 mb-1">Personalized Shopping</h4>
                             <p className="text-gray-600 text-sm">Filter by location, farming method, or product type.</p>
                         </div>
                     </div>
@@ -461,8 +462,8 @@ const MainAppContent = () => {
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-4 text-center">
-                            <DollarSign size={32} className="text-green-500 mx-auto mb-2" />
-                            <h4 className="text-xl font-semibold text-green-800 mb-1">Secure & Transparent Transactions</h4>
+                            <DollarSign size={32} className="text-lime-600 mx-auto mb-2" />
+                            <h4 className="text-xl font-semibold text-amber-900 mb-1">Secure & Transparent Transactions</h4>
                             <p className="text-gray-600 text-sm">Flexible payments, secure checkout, transparent delivery.</p>
                         </div>
                     </div>
@@ -474,43 +475,43 @@ const MainAppContent = () => {
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-4 text-center">
-                            <Star size={32} className="text-green-500 mx-auto mb-2" />
-                            <h4 className="text-xl font-semibold text-green-800 mb-1">Trust & Quality Assurance</h4>
+                            <Star size={32} className="text-lime-600 mx-auto mb-2" />
+                            <h4 className="text-xl font-semibold text-amber-900 mb-1">Trust & Quality Assurance</h4>
                             <p className="text-gray-600 text-sm">Ratings and reviews system fosters trust.</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Innovative Features Section */}
-                <h3 className="text-2xl font-bold text-green-700 mt-10 mb-6">Innovative Features</h3>
+                <h3 className="text-2xl font-bold text-amber-800 mt-10 mb-6">Innovative Features</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Subscription Boxes */}
-                    <div className="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100 flex flex-col items-center text-center">
-                        <Box size={40} className="text-green-600 mb-3" />
+                    <div className="bg-amber-50 p-6 rounded-lg shadow-sm border border-amber-100 flex flex-col items-center text-center">
+                        <Box size={40} className="text-amber-700 mb-3" />
                         <h4 className="text-xl font-semibold text-gray-800 mb-2">Subscription Boxes</h4>
                         <p className="text-gray-600 text-sm">Set up recurring deliveries for loyal customers (weekly, bi-weekly, monthly).</p>
                     </div>
                     {/* Farm Services Marketplace */}
-                    <div className="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100 flex flex-col items-center text-center">
-                        <Settings size={40} className="text-green-600 mb-3" />
+                    <div className="bg-amber-50 p-6 rounded-lg shadow-sm border border-amber-100 flex flex-col items-center text-center">
+                        <Settings size={40} className="text-amber-700 mb-3" />
                         <h4 className="text-xl font-semibold text-gray-800 mb-2">Farm Services Marketplace</h4>
                         <p className="text-gray-600 text-sm">List and book specialized farm services or equipment rentals directly.</p>
                     </div>
                     {/* Event Booking */}
-                    <div className="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100 flex flex-col items-center text-center">
-                        <CalendarDays size={40} className="text-green-600 mb-3" />
+                    <div className="bg-amber-50 p-6 rounded-lg shadow-sm border border-amber-100 flex flex-col items-center text-center">
+                        <CalendarDays size={40} className="text-amber-700 mb-3" />
                         <h4 className="text-xl font-semibold text-gray-800 mb-2">Event Booking</h4>
                         <p className="text-gray-600 text-sm">Promote farm tours, workshops, or seasonal festivals directly to consumers.</p>
                     </div>
                     {/* Bulk and Wholesale Sales */}
-                    <div className="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100 flex flex-col items-center text-center">
-                        <Truck size={40} className="text-green-600 mb-3" />
+                    <div className="bg-amber-50 p-6 rounded-lg shadow-sm border border-amber-100 flex flex-col items-center text-center">
+                        <Truck size={40} className="text-amber-700 mb-3" />
                         <h4 className="text-xl font-semibold text-gray-800 mb-2">Bulk and Wholesale Sales</h4>
                         <p className="text-gray-600 text-sm">Facilitate large orders for restaurants, stores, or food hubs with dedicated tools.</p>
                     </div>
                     {/* Sustainability Dashboard */}
-                    <div className="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100 flex flex-col items-center text-center">
-                        <Sprout size={40} className="text-green-600 mb-3" />
+                    <div className="bg-amber-50 p-6 rounded-lg shadow-sm border border-amber-100 flex flex-col items-center text-center">
+                        <Sprout size={40} className="text-amber-700 mb-3" />
                         <h4 className="text-xl font-semibold text-gray-800 mb-2">Sustainability Dashboard</h4>
                         <p className="text-gray-600 text-sm">Showcase your eco-friendly practices and certifications to attract conscious buyers.</p>
                     </div>
@@ -674,7 +675,7 @@ const MainAppContent = () => {
 
         return (
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Our Farm Products</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Our Farm Products</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                     Discover a wide range of fresh produce, dairy, grains, meats, and unique value-added goods directly from local farmers. Whether you're looking for weekly staples or specialty items, AgriHub connects you to high-quality, sustainably sourced products.
                 </p>
@@ -684,7 +685,7 @@ const MainAppContent = () => {
                         <label htmlFor="category-filter" className="sr-only">Filter by Category</label>
                         <select
                             id="category-filter"
-                            className="w-full md:w-auto p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                            className="w-full md:w-auto p-2 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500"
                             value={filterCategory}
                             onChange={(e) => setFilterCategory(e.target.value)}
                             disabled={isLoading}
@@ -699,7 +700,7 @@ const MainAppContent = () => {
                         <input
                             type="text"
                             placeholder="Search products..."
-                            className="w-full p-2 pl-10 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                            className="w-full p-2 pl-10 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             disabled={isLoading}
@@ -709,7 +710,7 @@ const MainAppContent = () => {
                     {user?.role === 'farmer' || user?.role === 'admin' ? (
                         <button
                             onClick={() => { setShowAddProductModal(true); setNewProduct({ name: '', description: '', price: '', unit: '', image_url: '', category_id: '', stock_quantity: 0 }); }}
-                            className="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full md:w-auto bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                             disabled={isLoading}
                         >
                             <PlusCircle className="mr-2" size={20} /> Add New Product
@@ -726,7 +727,7 @@ const MainAppContent = () => {
 
                 {isLoading ? (
                     <div className="text-center py-10">
-                        <Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} />
+                        <Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} />
                         <p className="text-gray-600">Loading products...</p>
                     </div>
                 ) : filteredAndSearchedProducts.length === 0 ? (
@@ -748,10 +749,10 @@ const MainAppContent = () => {
                                     <div className="p-4">
                                         <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.name}</h3>
                                         <p className="text-gray-600 text-sm mb-3">{product.description?.substring(0, 70)}...</p>
-                                        <p className="text-green-700 font-bold text-lg">${product.price} / {product.unit}</p>
+                                        <p className="text-amber-800 font-bold text-lg">${product.price} / {product.unit}</p>
                                         <p className="text-gray-500 text-xs mt-2">Category: {product.category_name}</p>
                                         <p className="text-gray-500 text-xs">Farmer: {product.farmer_username}</p>
-                                        <p className={`text-sm font-semibold mt-1 ${product.stock_quantity > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                        <p className={`text-sm font-semibold mt-1 ${product.stock_quantity > 0 ? 'text-lime-700' : 'text-red-600'}`}>
                                             Stock: {product.stock_quantity > 0 ? `${product.stock_quantity} available` : 'Out of Stock'}
                                         </p>
                                     </div>
@@ -798,7 +799,7 @@ const MainAppContent = () => {
                             >
                                 <XCircle size={24} />
                             </button>
-                            <h3 className="text-2xl font-bold text-green-800 mb-6">{showEditProductModal ? 'Edit Product' : 'Add New Product'}</h3>
+                            <h3 className="text-2xl font-bold text-amber-900 mb-6">{showEditProductModal ? 'Edit Product' : 'Add New Product'}</h3>
                             {error && (
                                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md text-sm mb-4" role="alert">
                                     {error}
@@ -810,7 +811,7 @@ const MainAppContent = () => {
                                     <input
                                         type="text"
                                         id="productName"
-                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                         value={showEditProductModal ? currentProduct?.name || '' : newProduct.name}
                                         onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, name: e.target.value }) : setNewProduct({ ...newProduct, name: e.target.value })}
                                         placeholder="e.g., Organic Tomatoes"
@@ -823,7 +824,7 @@ const MainAppContent = () => {
                                     <textarea
                                         id="productDescription"
                                         rows="3"
-                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                         value={showEditProductModal ? currentProduct?.description || '' : newProduct.description}
                                         onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, description: e.target.value }) : setNewProduct({ ...newProduct, description: e.target.value })}
                                         placeholder="Freshly picked, juicy and sweet..."
@@ -837,7 +838,7 @@ const MainAppContent = () => {
                                         <input
                                             type="number"
                                             id="productPrice"
-                                            className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                            className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                             value={showEditProductModal ? currentProduct?.price || '' : newProduct.price}
                                             onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, price: parseFloat(e.target.value) }) : setNewProduct({ ...newProduct, price: parseFloat(e.target.value) })}
                                             placeholder="e.g., 3.50"
@@ -850,7 +851,7 @@ const MainAppContent = () => {
                                         <input
                                             type="text"
                                             id="productUnit"
-                                            className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                            className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                             value={showEditProductModal ? currentProduct?.unit || '' : newProduct.unit}
                                             onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, unit: e.target.value }) : setNewProduct({ ...newProduct, unit: e.target.value })}
                                             placeholder="e.g., kg, dozen, lb"
@@ -865,7 +866,7 @@ const MainAppContent = () => {
                                         <input
                                             type="number"
                                             id="productStock"
-                                            className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                            className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                             value={showEditProductModal ? currentProduct?.stock_quantity || 0 : newProduct.stock_quantity}
                                             onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, stock_quantity: parseInt(e.target.value) }) : setNewProduct({ ...newProduct, stock_quantity: parseInt(e.target.value) })}
                                             placeholder="e.g., 100"
@@ -877,7 +878,7 @@ const MainAppContent = () => {
                                         <label htmlFor="productCategory" className="block text-gray-700 text-sm font-bold mb-2">Category</label>
                                         <select
                                             id="productCategory"
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 shadow-sm transition duration-150 ease-in-out"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-amber-500 focus:border-amber-500 shadow-sm transition duration-150 ease-in-out"
                                             value={showEditProductModal ? currentProduct?.category_id || '' : newProduct.category_id}
                                             onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, category_id: e.target.value }) : setNewProduct({ ...newProduct, category_id: e.target.value })}
                                             required
@@ -895,7 +896,7 @@ const MainAppContent = () => {
                                     <input
                                         type="text"
                                         id="productImageUrl"
-                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                         value={showEditProductModal ? currentProduct?.image_url || '' : newProduct.image_url}
                                         onChange={(e) => showEditProductModal ? setCurrentProduct({ ...currentProduct, image_url: e.target.value }) : setNewProduct({ ...newProduct, image_url: e.target.value })}
                                         placeholder="e.g., https://example.com/tomato.jpg"
@@ -904,7 +905,7 @@ const MainAppContent = () => {
                                 </div>
                                 <button
                                     onClick={() => handleProductSubmit(showEditProductModal)}
-                                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                                     disabled={isLoading}
                                 >
                                     {isLoading ? (
@@ -950,7 +951,7 @@ const MainAppContent = () => {
         if (isLoading) {
             return (
                 <div className="text-center py-10">
-                    <Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} />
+                    <Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} />
                     <p className="text-gray-600">Loading product details...</p>
                 </div>
             );
@@ -960,7 +961,7 @@ const MainAppContent = () => {
             return (
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md text-sm mb-4 text-center">
                     Error: {error}
-                    <button onClick={() => navigate('products')} className="mt-4 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Back to Products</button>
+                    <button onClick={() => navigate('products')} className="mt-4 px-4 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800">Back to Products</button>
                 </div>
             );
         }
@@ -969,7 +970,7 @@ const MainAppContent = () => {
 
         return (
             <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
-                <button onClick={() => navigate('products')} className="mb-6 text-green-700 hover:text-green-900 flex items-center">
+                <button onClick={() => navigate('products')} className="mb-6 text-amber-800 hover:text-amber-900 flex items-center">
                     <ChevronLeft size={20} className="mr-1" /> Back to Products
                 </button>
                 <div className="grid md:grid-cols-2 gap-8">
@@ -983,18 +984,18 @@ const MainAppContent = () => {
                     </div>
                     <div>
                         <h2 className="text-4xl font-bold text-gray-800 mb-3">{product.name}</h2>
-                        <p className="text-green-700 font-bold text-3xl mb-4">${product.price} / {product.unit}</p>
+                        <p className="text-amber-800 font-bold text-3xl mb-4">${product.price} / {product.unit}</p>
                         <p className="text-gray-700 mb-4">{product.description}</p>
                         <p className="text-gray-600 text-sm mb-2">Category: <span className="font-semibold">{product.category_name}</span></p>
                         <p className="text-gray-600 text-sm mb-4">Farmer: <span className="font-semibold">{product.farmer_username}</span></p>
                         <p className="text-sm font-semibold mb-6">
-                            <span className={product.stock_quantity > 0 ? 'text-green-600' : 'text-red-600'}>
+                            <span className={product.stock_quantity > 0 ? 'text-lime-700' : 'text-red-600'}>
                                 Stock: {product.stock_quantity > 0 ? `${product.stock_quantity} available` : 'Out of Stock'}
                             </span>
                         </p>
                         <button
                             onClick={() => addToCart(product)}
-                            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md shadow-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                            className="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-4 rounded-md shadow-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                             disabled={product.stock_quantity <= 0}
                         >
                             <ShoppingCart size={20} /> Add to Cart
@@ -1018,7 +1019,7 @@ const MainAppContent = () => {
                     <p className="text-gray-600 mb-6">Looks like you haven't added anything to your cart yet.</p>
                     <button
                         onClick={() => navigate('products')}
-                        className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md shadow-md transition-colors duration-300"
+                        className="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-md shadow-md transition-colors duration-300"
                     >
                         Start Shopping
                     </button>
@@ -1028,7 +1029,7 @@ const MainAppContent = () => {
 
         return (
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Your Shopping Cart</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Your Shopping Cart</h2>
                 <div className="grid lg:grid-cols-3 gap-8">
                     {/* Cart Items List */}
                     <div className="lg:col-span-2 space-y-4">
@@ -1058,7 +1059,7 @@ const MainAppContent = () => {
                                         >
                                             <Plus size={16} />
                                         </button>
-                                        <span className="ml-4 text-green-700 font-semibold">
+                                        <span className="ml-4 text-amber-800 font-semibold">
                                             ${(item.price * item.quantity).toFixed(2)}
                                         </span>
                                     </div>
@@ -1075,26 +1076,26 @@ const MainAppContent = () => {
                     </div>
 
                     {/* Cart Summary */}
-                    <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md border border-green-200 sticky top-4">
-                        <h3 className="text-xl font-bold text-green-800 mb-4">Order Summary</h3>
+                    <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md border border-amber-200 sticky top-4">
+                        <h3 className="text-xl font-bold text-amber-900 mb-4">Order Summary</h3>
                         <div className="flex justify-between text-lg font-semibold mb-4">
                             <span>Total Items:</span>
                             <span>{cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
                         </div>
-                        <div className="flex justify-between text-2xl font-bold text-green-800 mb-6">
+                        <div className="flex justify-between text-2xl font-bold text-amber-900 mb-6">
                             <span>Subtotal:</span>
                             <span>${cartTotal.toFixed(2)}</span>
                         </div>
                         {user ? (
                             <button
                                 onClick={() => navigate('checkout')}
-                                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                                className="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-300 flex items-center justify-center space-x-2"
                             >
                                 <CheckCircle2 size={20} /> Proceed to Checkout
                             </button>
                         ) : (
                             <p className="text-center text-gray-600 text-sm">
-                                <button onClick={() => navigate('auth')} className="text-green-600 hover:underline">Log in</button> to proceed to checkout.
+                                <button onClick={() => navigate('auth')} className="text-amber-700 hover:underline">Log in</button> to proceed to checkout.
                             </p>
                         )}
                         <button
@@ -1191,7 +1192,7 @@ const MainAppContent = () => {
             // Render a loading or redirection message while useEffect handles navigation
             return (
                 <div className="text-center py-10">
-                    <Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} />
+                    <Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} />
                     <p className="text-gray-600">{error || "Redirecting..."}</p>
                 </div>
             );
@@ -1200,13 +1201,13 @@ const MainAppContent = () => {
         if (orderSuccess) {
             return (
                 <div className="p-6 text-center bg-white rounded-lg shadow-lg max-w-xl mx-auto my-8">
-                    <CheckCircle2 size={64} className="text-green-500 mx-auto mb-4" />
-                    <h2 className="text-3xl font-bold text-green-800 mb-4">Order Placed Successfully!</h2>
+                    <CheckCircle2 size={64} className="text-lime-600 mx-auto mb-4" />
+                    <h2 className="text-3xl font-bold text-amber-900 mb-4">Order Placed Successfully!</h2>
                     <p className="text-gray-700 mb-2">Your order ID is: <span className="font-semibold">{orderId}</span></p>
                     <p className="text-gray-600 mb-6">Thank you for shopping with AgriHub!</p>
                     <button
                         onClick={() => navigate('dashboard')}
-                        className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md shadow-md transition-colors duration-300"
+                        className="bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-md shadow-md transition-colors duration-300"
                     >
                         View My Orders
                     </button>
@@ -1222,7 +1223,7 @@ const MainAppContent = () => {
 
         return (
             <div className="p-6 max-w-3xl mx-auto bg-white rounded-lg shadow-lg">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Checkout</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Checkout</h2>
 
                 {error && (
                     <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md text-sm mb-4" role="alert">
@@ -1233,7 +1234,7 @@ const MainAppContent = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Order Summary */}
                     <div>
-                        <h3 className="text-xl font-semibold text-green-700 mb-4">Order Summary</h3>
+                        <h3 className="text-xl font-semibold text-amber-800 mb-4">Order Summary</h3>
                         <ul className="space-y-2 border-b border-gray-200 pb-4 mb-4">
                             {cartItems.map(item => (
                                 <li key={item.id} className="flex justify-between items-center text-gray-700">
@@ -1242,7 +1243,7 @@ const MainAppContent = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex justify-between text-xl font-bold text-green-800">
+                        <div className="flex justify-between text-xl font-bold text-amber-900">
                             <span>Total:</span>
                             <span>${cartTotal.toFixed(2)}</span>
                         </div>
@@ -1250,13 +1251,13 @@ const MainAppContent = () => {
 
                     {/* Shipping and Payment Form */}
                     <form onSubmit={handlePlaceOrder} className="space-y-4">
-                        <h3 className="text-xl font-semibold text-green-700 mb-4">Shipping & Payment</h3>
+                        <h3 className="text-xl font-semibold text-amber-800 mb-4">Shipping & Payment</h3>
                         <div>
                             <label htmlFor="shippingAddress" className="block text-gray-700 text-sm font-bold mb-2">Shipping Address</label>
                             <textarea
                                 id="shippingAddress"
                                 rows="3"
-                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                 value={shippingAddress}
                                 onChange={(e) => setShippingAddress(e.target.value)}
                                 placeholder="Street, City, State, Zip Code"
@@ -1268,7 +1269,7 @@ const MainAppContent = () => {
                             <label htmlFor="paymentMethod" className="block text-gray-700 text-sm font-bold mb-2">Payment Method</label>
                             <select
                                 id="paymentMethod"
-                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                 value={paymentMethod}
                                 onChange={(e) => setPaymentMethod(e.target.value)}
                                 required
@@ -1282,7 +1283,7 @@ const MainAppContent = () => {
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                            className="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                             disabled={isLoading}
                         >
                             {isLoading ? (
@@ -1351,13 +1352,13 @@ const MainAppContent = () => {
             fetchData();
         }, [user, authLoading]); // Re-fetch when user or authLoading state changes
 
-        if (authLoading) return <div className="text-center py-10"><Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} /><p>Loading user data...</p></div>;
-        if (!user) return <div className="p-6 text-center text-gray-600"><p>Please log in to view your dashboard.</p><button onClick={() => navigate('auth')} className="mt-4 px-4 py-2 bg-green-600 text-white rounded-md">Login</button></div>;
+        if (authLoading) return <div className="text-center py-10"><Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} /><p>Loading user data...</p></div>;
+        if (!user) return <div className="p-6 text-center text-gray-600"><p>Please log in to view your dashboard.</p><button onClick={() => navigate('auth')} className="mt-4 px-4 py-2 bg-amber-700 text-white rounded-md">Login</button></div>;
 
 
         return (
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Welcome, {user.username}!</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Welcome, {user.username}!</h2>
                 <p className="text-gray-700 mb-4">Your role: <span className="font-semibold capitalize">{user.role}</span></p>
 
                 {error && (
@@ -1368,7 +1369,7 @@ const MainAppContent = () => {
 
                 {isLoadingData ? (
                     <div className="text-center py-10">
-                        <Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} />
+                        <Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} />
                         <p className="text-gray-600">Loading dashboard data...</p>
                     </div>
                 ) : (
@@ -1382,7 +1383,7 @@ const MainAppContent = () => {
                         {/* Customer Orders Section */}
                         {user.role === 'customer' && (
                             <div className="mt-8">
-                                <h3 className="text-2xl font-semibold text-green-700 mb-4">My Orders</h3>
+                                <h3 className="text-2xl font-semibold text-amber-800 mb-4">My Orders</h3>
                                 {orders.length === 0 ? (
                                     <p className="text-gray-600">You haven't placed any orders yet.</p>
                                 ) : (
@@ -1391,7 +1392,7 @@ const MainAppContent = () => {
                                             <div key={order.id} className="bg-white p-5 rounded-lg shadow-sm border border-gray-200">
                                                 <div className="flex justify-between items-center mb-2">
                                                     <h4 className="font-bold text-lg text-gray-800">Order #{order.id?.substring(0, 8)}...</h4>
-                                                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${order.status === 'delivered' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
+                                                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${order.status === 'delivered' ? 'bg-lime-100 text-lime-800' : 'bg-yellow-100 text-yellow-800'}`}>
                                                         {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                                                     </span>
                                                 </div>
@@ -1417,13 +1418,13 @@ const MainAppContent = () => {
                         {/* Farmer/Admin Managed Products Section */}
                         {(user.role === 'farmer' || user.role === 'admin') && (
                             <div className="mt-8">
-                                <h3 className="text-2xl font-semibold text-green-700 mb-4">Your Managed Products ({productsManaged.length})</h3>
+                                <h3 className="text-2xl font-semibold text-amber-800 mb-4">Your Managed Products ({productsManaged.length})</h3>
                                 {productsManaged.length === 0 ? (
                                     <p className="text-gray-600">You haven't listed any products yet. Go to the Products page to add your first listing!</p>
                                 ) : (
                                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                         {productsManaged.map(product => (
-                                            <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-green-200">
+                                            <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-amber-200">
                                                 <img
                                                     src={product.image_url || `https://placehold.co/400x200/e0ffe0/333333?text=${product.name || 'Product'}`}
                                                     alt={product.name}
@@ -1432,7 +1433,7 @@ const MainAppContent = () => {
                                                 />
                                                 <div className="p-3">
                                                     <h4 className="text-lg font-semibold text-gray-800">{product.name}</h4>
-                                                    <p className="text-green-700 font-bold">${product.price} / {product.unit}</p>
+                                                    <p className="text-amber-800 font-bold">${product.price} / {product.unit}</p>
                                                     <p className="text-gray-500 text-xs">Stock: {product.stock_quantity}</p>
                                                 </div>
                                             </div>
@@ -1445,7 +1446,7 @@ const MainAppContent = () => {
                         {/* Admin/Farmer View of All Orders */}
                         {(user.role === 'admin' || user.role === 'farmer') && (
                              <div className="mt-8">
-                                <h3 className="text-2xl font-semibold text-green-700 mb-4">
+                                <h3 className="text-2xl font-semibold text-amber-800 mb-4">
                                     {user.role === 'admin' ? 'All Orders' : 'Orders for Your Products'} ({orders.length})
                                 </h3>
                                 {orders.length === 0 ? (
@@ -1456,7 +1457,7 @@ const MainAppContent = () => {
                                             <div key={order.id} className="bg-white p-5 rounded-lg shadow-sm border border-gray-200">
                                                 <div className="flex justify-between items-center mb-2">
                                                     <h4 className="font-bold text-lg text-gray-800">Order #{order.id?.substring(0, 8)}...</h4>
-                                                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${order.status === 'delivered' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
+                                                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${order.status === 'delivered' ? 'bg-lime-100 text-lime-800' : 'bg-yellow-100 text-yellow-800'}`}>
                                                         {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                                                     </span>
                                                 </div>
@@ -1501,7 +1502,7 @@ const MainAppContent = () => {
                                                                     console.error("Update order status error:", err);
                                                                 }
                                                             }}
-                                                            className="block w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                                                            className="block w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500"
                                                         >
                                                             <option value="pending">Pending</option>
                                                             <option value="processing">Processing</option>
@@ -1549,7 +1550,8 @@ const MainAppContent = () => {
         const handleAddService = () => {
             // This is a dummy handler, for a real backend, you'd make a POST request
             if (!newService.name || !newService.description || !newService.price) {
-                alert("Service name, description, and price are required.");
+                // IMPORTANT: Changed alert to console.error as per instructions
+                console.error("Service name, description, and price are required.");
                 return;
             }
             const newId = `s${services.length + 1}`;
@@ -1561,21 +1563,21 @@ const MainAppContent = () => {
 
         return (
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Integrated Farm Services</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Integrated Farm Services</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                     Beyond products, AgriHub offers a comprehensive marketplace for farm-related services. Farmers can list and book essential services like equipment rentals, specialized agricultural support, or even offer unique on-farm experiences to connect with the community.
                 </p>
                 {user?.role === 'farmer' || user?.role === 'admin' ? (
                     <button
                         onClick={() => setShowAddServiceModal(true)}
-                        className="mb-6 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 flex items-center"
+                        className="mb-6 bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300 flex items-center"
                     >
                         <PlusCircle className="mr-2" size={20} /> Add New Service
                     </button>
                 ) : null}
                 {isLoading ? (
                     <div className="text-center py-10">
-                        <Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} />
+                        <Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} />
                         <p className="text-gray-600">Loading services...</p>
                     </div>
                 ) : services.length === 0 ? (
@@ -1586,7 +1588,7 @@ const MainAppContent = () => {
                             <div key={service.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.name}</h3>
                                 <p className="text-gray-600 text-sm mb-3">{service.description}</p>
-                                <p className="text-green-700 font-bold text-lg">${service.price || 'Varies'}</p>
+                                <p className="text-amber-800 font-bold text-lg">${service.price || 'Varies'}</p>
                                 <p className="text-gray-500 text-xs mt-2">Provided by: {service.providerId?.substring(0, 8)}...</p>
                             </div>
                         ))}
@@ -1601,14 +1603,14 @@ const MainAppContent = () => {
                             >
                                 <XCircle size={24} />
                             </button>
-                            <h3 className="text-2xl font-bold text-green-800 mb-6">Add New Service</h3>
+                            <h3 className="text-2xl font-bold text-amber-900 mb-6">Add New Service</h3>
                             <div className="space-y-4">
                                 <div>
                                     <label htmlFor="serviceName" className="block text-gray-700 text-sm font-bold mb-2">Service Name</label>
                                     <input
                                         type="text"
                                         id="serviceName"
-                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                         value={newService.name}
                                         onChange={(e) => setNewService({ ...newService, name: e.target.value })}
                                         placeholder="e.g., Tractor Rental"
@@ -1620,7 +1622,7 @@ const MainAppContent = () => {
                                     <textarea
                                         id="serviceDescription"
                                         rows="3"
-                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                         value={newService.description}
                                         onChange={(e) => setNewService({ ...newService, description: e.target.value })}
                                         placeholder="Full-day tractor rental with operator..."
@@ -1632,7 +1634,7 @@ const MainAppContent = () => {
                                     <input
                                         type="number"
                                         id="servicePrice"
-                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-green-500"
+                                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-amber-500"
                                         value={newService.price}
                                         onChange={(e) => setNewService({ ...newService, price: e.target.value })}
                                         placeholder="e.g., 150.00"
@@ -1641,7 +1643,7 @@ const MainAppContent = () => {
                                 </div>
                                 <button
                                     onClick={handleAddService}
-                                    className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300"
+                                    className="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-colors duration-300"
                                 >
                                     Add Service
                                 </button>
@@ -1674,13 +1676,13 @@ const MainAppContent = () => {
 
         return (
             <div className="p-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-6">Upcoming Events & Workshops</h2>
+                <h2 className="text-3xl font-bold text-amber-900 mb-6">Upcoming Events & Workshops</h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                     Join the AgriHub community at various virtual or in-person events. From seasonal festivals and cooking demonstrations to sustainable farming workshops and farmer meetups, there's always something new to learn and experience.
                 </p>
                 {isLoading ? (
                     <div className="text-center py-10">
-                        <Loader2 className="animate-spin text-green-500 mx-auto mb-2" size={48} />
+                        <Loader2 className="animate-spin text-amber-600 mx-auto mb-2" size={48} />
                         <p className="text-gray-600">Loading events...</p>
                     </div>
                 ) : events.length === 0 ? (
@@ -1756,7 +1758,7 @@ const MainAppContent = () => {
             {/* Show loading spinner while authentication state is being determined */}
             {authLoading ? (
                 <div className="flex items-center justify-center min-h-screen">
-                    <Loader2 className="animate-spin text-green-500" size={64} />
+                    <Loader2 className="animate-spin text-amber-600" size={64} />
                 </div>
             ) : (
                 // If not logged in and not on the auth page, display the AuthPage
